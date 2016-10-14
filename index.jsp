@@ -25,6 +25,7 @@
   <script type="text/javascript" src="master/js/highlight.pack.js"></script>
   <script type="text/javascript" src="master/js/tabifier.js"></script>
   <script src="master/js/js.js"></script>
+  <script src="master/js/popup.js"></script>
   <script src="master/js/jPages.js"></script>
 
   <script type="text/javascript">
@@ -115,7 +116,13 @@ $(document).ready(function() {
 	  </logic:present>
   </div> <!--! end of #content -->
 </div> <!--! end of #container -->
-
+<div class="imgshow_popup">
+  <div class="closebtn">X</div>
+  <div class="prevbtn"></div>
+  <div class="nextbtn"></div>
+  <img src="" class="bigImg">
+  <div class="cover"></div>
+</div>
   
 </form>
 </body>
