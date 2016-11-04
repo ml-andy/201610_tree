@@ -375,7 +375,7 @@ div#content.author p { width: 590px; position: relative; }
 }
 
 
-/* andy 20161005 up date start*/
+/* andy 20161104 up date start */
 body{
 min-width:970px;
 background:url(../img/1005/bg.jpg) no-repeat;
@@ -392,12 +392,14 @@ margin:auto;
 /* Sidebar */
 #sidebar{
 position:absolute;
-width:415px;
+width:100%;
+max-width: 1170px;
 height:64px;
 left:50%;
-top:90px;
-margin-left:158px;
-background:url(../img/1005/menu_box_bg.png) no-repeat;
+top:240px;
+margin-left:0;
+transform: translate(-50%,0);
+/*background:url(../img/1005/menu_box_bg.png) no-repeat;*/
 background-position:center;
 z-index:9;
 }
@@ -411,10 +413,11 @@ box-sizing:border-box;
 padding:13px 18px;
 margin: 0;
 list-style:none;
+text-align: center;
 }
 #sidebar ul li{
 position:relative;
-float:left;
+display: inline-block;
 width:auto;
 padding:8px 20px;
 margin-right:14px;
@@ -441,7 +444,7 @@ text-indent:-99999px;
 width:200px;
 height:200px;
 left:50%;
-top:68px;
+top:38px;
 margin-left:-100px;
 background:url(../img/1005/logo.png) no-repeat;
 background-position:center;
@@ -686,4 +689,4 @@ top:0;
 background-color:rgba(0,0,0,0.8);
 z-index:0;
 }
-/* andy 20161005 up date end*/
+/* andy 20161104 up date end */

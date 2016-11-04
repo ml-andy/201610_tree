@@ -1,7 +1,8 @@
 ﻿$(function() {
-	$(window).load(function(){
-		new_imgshow_popup();
-	});
+	// $(window).load(function(){
+	// 	new_imgshow_popup();
+	// });
+	new_imgshow_popup();
 });
 function new_imgshow_popup(){
 	$('.imgshow_popup').each(imgshow_popup);
@@ -15,7 +16,8 @@ function new_imgshow_popup(){
 			imgclick = $('#content #itemContainer li'),
 			nowShow = 0;
 
-		imgclick.on('click',function(){
+		imgclick.on('click',function(e){
+			e.preventDefault();
 			nowShow = $(this).index();
 			bigImg_show(true);
 		});
@@ -39,13 +41,13 @@ function new_imgshow_popup(){
 				if(nowShow>=$('#content #itemContainer li').length) nowShow = 0;
 				else if(nowShow<0) nowShow = $('#content #itemContainer li').length - 1;
 
-				var src = $('#content #itemContainer li').eq(nowShow).attr('big');
+				var _src = $('#content #itemContainer li').eq(nowShow).find('img').attr('big');
 
 				console.log('nowShow:'+nowShow);
-				console.log('src:'+src);
+				console.log('src:'+_src);
 
 				bigImg.fadeOut(300,function(){
-					bigImg.attr('src',src).fadeIn();
+					bigImg.attr('src',_src).fadeIn();
 				});
 				
 				_this.fadeIn();
